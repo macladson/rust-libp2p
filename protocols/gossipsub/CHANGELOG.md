@@ -1,10 +1,11 @@
 ## 0.50.0
 - Send all topic subscriptions in a single hello RPC when connecting to a new peer, aligning with the GossipSub spec and other implementations (Go, Nim, JS).
   See [PR 6385](https://github.com/libp2p/rust-libp2p/pull/6385).
+
 - Raise MSRV to 1.88.0.
   See [PR 6273](https://github.com/libp2p/rust-libp2p/pull/6273).
 
-- Revert migration from `prost` to `quick-protobuf`; this reintroduces the `protoc` build-time dependency (revert of [PR 3312]).
+- Revert migration to `quick-protobuf`, migrate back to `prost`.
   See [PR 6363](https://github.com/libp2p/rust-libp2p/pull/6363).
 
 - Optimize IDONTWANT sending by avoiding broadcasts for already-seen messages and deduplicating recipient peers.

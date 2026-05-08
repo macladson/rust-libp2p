@@ -1,5 +1,7 @@
-use std::collections::{BTreeMap, BTreeSet};
-use std::path::PathBuf;
+use std::{
+    collections::{BTreeMap, BTreeSet},
+    path::PathBuf,
+};
 
 /// All `.proto` files to compile, relative to the workspace root.
 const PROTO_FILES: &[&str] = &[

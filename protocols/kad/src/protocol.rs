@@ -119,12 +119,14 @@ impl TryFrom<proto::Peer> for KadPeer {
             };
         }
 
+        let connection_ty = proto::ConnectionType::try_from(peer.connection)
+            .map_err(|e| invalid_data(format!("unknown connection type: {e}")))?
+            .into();
+
         Ok(KadPeer {
             node_id,
             multiaddrs: addrs,
-            connection_ty: proto::ConnectionType::try_from(peer.connection)
-                .unwrap_or(proto::ConnectionType::NotConnected)
-                .into(),
+            connection_ty,
         })
     }
 }
