@@ -1,4 +1,4 @@
-# 0.4.0
+## 0.4.0
 
 - Raise MSRV to 1.88.0.
   See [PR 6273](https://github.com/libp2p/rust-libp2p/pull/6273).
@@ -9,7 +9,7 @@
 - Add `From<Error> for io::Error` conversion.
 - Add tests including QuickCheck-based roundtrip property test.
 
-# 0.3.0
+## 0.3.0
 
 - Implement `From` trait for `std::io::Error`. See [PR 2622].
 - Don't leak `prost` dependency in `Error` type. See [PR 3058].
@@ -19,7 +19,7 @@
 [PR 3058]: https://github.com/libp2p/rust-libp2p/pull/3058/
 [PR 3090]: https://github.com/libp2p/rust-libp2p/pull/3090
 
-# 0.2.0
+## 0.2.0
 
 - Update to prost(-build) `v0.11`. See [PR 2788].
 
